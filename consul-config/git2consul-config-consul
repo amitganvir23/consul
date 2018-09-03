@@ -1,0 +1,26 @@
+{
+    "version": "1.0",
+    "logger": {
+        "name": "git2consul-delivery",
+        "streams": [{
+                "level": "trace",
+                "stream": "process.stdout"
+            },
+            {
+                "level": "debug",
+                "type": "rotating-file",
+                "path": "/var/log/git2consul/git2consul.log"
+            }
+        ]
+    },
+    "max_sockets": 1,
+    "repos": [{
+        "name": "mongov2-application-config-common",
+        "url": "ssh://git@bitbucket.git.com/mongov2/mongo-application-config-common.git",
+        "branches": ["mongov2-delivery"],
+        "hooks": [{
+            "type": "polling",
+            "interval": "1"
+        }]
+    }]
+}
