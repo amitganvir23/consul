@@ -1,7 +1,7 @@
 This is single hostmachine of Consul and git2consl. not for Cluster
 consul:
-****************** CONSUL SETUP ******************
-## CHecking my IP address of hostmachine
+##### CONSUL SETUP
+### CHecking my IP address of hostmachine
  - # ip -o -4 addr list|grep enp0s3| head -n1 | awk '{print $4}' | cut -d/ -f1
 
 ##To run single container of consul with single host. It will bind with your hostmachine's IP:
